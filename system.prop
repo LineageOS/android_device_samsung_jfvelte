@@ -25,17 +25,8 @@ use.voice.path.for.pcm.voip=true
 ro.bt.bdaddr_path=/efs/bluetooth/bt_addr
 ro.qualcomm.bt.hci_transport=smd
 ro.bluetooth.hfp.ver=1.6
-ro.qualcomm.bluetooth.opp=true
-ro.qualcomm.bluetooth.hfp=true
-ro.qualcomm.bluetooth.hsp=true
-ro.qualcomm.bluetooth.pbap=true
-ro.qualcomm.bluetooth.ftp=true
-ro.qualcomm.bluetooth.map=true
-ro.qualcomm.bluetooth.nap=true
 ro.bluetooth.sap=false
 ro.bluetooth.dun=false
-ro.bluetooth.request.master=true
-bluetooth.a2dp.sink.enabled=false
 qcom.bluetooth.soc=smd
 
 # Charger
