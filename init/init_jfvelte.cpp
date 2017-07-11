@@ -64,8 +64,8 @@ void vendor_load_properties()
 
     if (strstr(bootloader, "I9515")) {
         /* jfveltexx - GT-i9515 */
-        property_override("ro.build.fingerprint", "samsung/jfveltexx/jfvelte:5.0.1/LRX22C/I9515XXU1BPK3:user/release-keys");
-        property_override("ro.build.description", "jfveltexx-user 5.0.1 LRX22C I9515XXU1BPK3 release-keys");
+        property_override("ro.build.fingerprint", "samsung/jfveltexx/jfvelte:5.0.1/LRX22C/I9515XXU1BQD2:user/release-keys");
+        property_override("ro.build.description", "jfveltexx-user 5.0.1 LRX22C I9515XXU1BQD2 release-keys");
         property_override("ro.product.model", "GT-I9515");
         property_override("ro.product.device", "jfvelte");
         property_override("ro.product.name", "jfveltexx");
