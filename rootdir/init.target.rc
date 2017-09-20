@@ -5,7 +5,7 @@ on init
     # Create directories for wifihal services
     mkdir /dev/socket/wifihal 2770 wifi wifi
 
-service hciattach /vendor/bin/init.qcom.bt.sh
+service vendor.hciattach /vendor/bin/init.qcom.bt.sh
     class late_start
     user bluetooth
     group bluetooth net_bt_admin
@@ -13,12 +13,12 @@ service hciattach /vendor/bin/init.qcom.bt.sh
     oneshot
 
 on property:vendor.bluetooth.hciattach=true
-    start hciattach
+    start vendor.hciattach
 
 on property:vendor.bluetooth.hciattach=false
     setprop vendor.bluetooth.status off
 
-service wcnss-service /vendor/bin/wcnss_service
+service vendor.wcnss-service /vendor/bin/wcnss_service
     class main
     user system
     group system wifi radio
