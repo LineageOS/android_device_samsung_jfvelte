@@ -1,7 +1,4 @@
-#!/bin/bash
-#
-# Copyright (C) 2016 The CyanogenMod Project
-# Copyright (C) 2017-2019 The LineageOS Project
+# Copyright (C) 2019 The LineageOS Project
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
@@ -15,12 +12,5 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-set -e
-
-# Required!
-export DEVICE=jfvelte
-export DEVICE_COMMON=jf-common
-export VENDOR=samsung
-export DEVICE_BRINGUP_YEAR=2014
-
-./../../$VENDOR/$DEVICE_COMMON/setup-makefiles.sh $@
+PRODUCT_MAKEFILES := \
+    $(LOCAL_DIR)/lineage_jfvelte.mk
