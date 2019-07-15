@@ -1,0 +1,18 @@
+service hciattach /vendor/bin/init.qcom.bt.sh
+    class late_start
+    user bluetooth
+    group bluetooth net_bt_admin
+    disabled
+    oneshot
+
+on property:vendor.bluetooth.hciattach=true
+    start hciattach
+
+on property:vendor.bluetooth.hciattach=false
+    setprop vendor.bluetooth.status off
+
+service wcnss-service /vendor/bin/wcnss_service
+    class main
+    user system
+    group system wifi radio
+    oneshot
