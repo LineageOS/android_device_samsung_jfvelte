@@ -1,5 +1,4 @@
-# Copyright (C) 2016 The CyanogenMod Project
-# Copyright (C) 2017-2019 The LineageOS Project
+# Copyright (C) 2019 The LineageOS Project
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
@@ -13,20 +12,5 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-# Inherit from jf-common
--include device/samsung/jf-common/BoardConfigCommon.mk
-
-# Inherit from proprietary vendor
--include vendor/samsung/jfvelte/BoardConfigVendor.mk
-
-# Manifest
-DEVICE_MANIFEST_FILE += device/samsung/jfvelte/manifest.xml
-
-# Assert
-TARGET_OTA_ASSERT_DEVICE := jfvelte
-
-# Kernel
-TARGET_KERNEL_VARIANT_CONFIG := jfve_eur_defconfig
-
-# Move wcnss_service to vendor
-PRODUCT_VENDOR_MOVE_ENABLED := true
+PRODUCT_MAKEFILES := \
+    $(LOCAL_DIR)/lineage_jfvelte.mk
