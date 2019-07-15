@@ -1,6 +1,5 @@
-
-# Copyright (C) 2009 The CyanogenMod Project
-# Copyright (C) 2017 The LineageOS Project
+# Copyright (C) 2016 The CyanogenMod Project
+# Copyright (C) 2017-2019 The LineageOS Project
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
@@ -14,147 +13,20 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-#
-# This file sets variables that control the way modules are built
-# thorughout the system. It should not be used to conditionally
-# disable makefiles (the proper mechanism to control what gets
-# included in a build is to use PRODUCT_PACKAGES in a product
-# definition file).
-#
+# Inherit from jf-common
+-include device/samsung/jf-common/BoardConfigCommon.mk
 
-# Inherit from qcom-common
--include device/samsung/qcom-common/BoardConfigCommon.mk
+# Inherit from proprietary vendor
+-include vendor/samsung/jfvelte/BoardConfigVendor.mk
 
-COMMON_PATH := device/samsung/jfvelte
+# Manifest
+DEVICE_MANIFEST_FILE += device/samsung/jfvelte/manifest.xml
 
 # Assert
-TARGET_OTA_ASSERT_DEVICE := jfvelte,jfveltexx,i9515,I9515,GT-I9515,GT-i9515,gt-i9515,I9515L,i9515L,i9515l,I9515l,gt-i9515l,GT-I9515L,jfltexx,i9505,GT-I9505,jgedlte,i9505g,GT-I9505G,jflte
-
-# Platform
-TARGET_BOARD_PLATFORM := msm8960
-
-# Architecture
-TARGET_CPU_VARIANT := krait
-
-# Bootloader
-TARGET_BOOTLOADER_BOARD_NAME := MSM8960
+TARGET_OTA_ASSERT_DEVICE := jfvelte,jfveltexx,I9515,I9515L,GT-I9515,GT-I9515L
 
 # Kernel
-BOARD_KERNEL_CMDLINE := console=null androidboot.hardware=qcom user_debug=31 zcache msm_rtb.filter=0x3F ehci-hcd.park=3
-BOARD_KERNEL_BASE := 0x80200000
-BOARD_MKBOOTIMG_ARGS := --ramdisk_offset 0x02000000
-BOARD_KERNEL_PAGESIZE := 2048
-TARGET_KERNEL_CONFIG := lineageos_jfve_defconfig
-TARGET_KERNEL_SOURCE := kernel/samsung/jf
+TARGET_KERNEL_VARIANT_CONFIG := jfve_eur_defconfig
 
-# Audio
-BOARD_HAVE_SAMSUNG_CSDCLIENT := true
-BOARD_USES_ALSA_AUDIO := true
-USE_CUSTOM_AUDIO_POLICY := 1
-
-# Enable dex-preopt
-#ifeq ($(HOST_OS),linux)
-#  ifeq ($(WITH_DEXPREOPT),)
-WITH_DEXPREOPT := true
-#  endif
-#endif
-
-# ANT
-BOARD_ANT_WIRELESS_DEVICE := "vfs-prerelease"
-
-# Bluetooth
-BOARD_HAVE_BLUETOOTH      := true
-BOARD_HAVE_BLUETOOTH_QCOM := true
-BLUETOOTH_HCI_USE_MCT     := true
-# QCOM_BT_USE_SMD_TTY       := true
-BOARD_BLUETOOTH_BDROID_BUILDCFG_INCLUDE_DIR := $(COMMON_PATH)/bluetooth
-
-# Camera
-TARGET_PROVIDES_CAMERA_HAL := true
-USE_DEVICE_SPECIFIC_CAMERA := true
-BOARD_GLOBAL_CFLAGS += -DCAMERA_VENDOR_L_COMPAT
-
-# Charger
-BOARD_CHARGING_CMDLINE_NAME := "androidboot.bootchg"
-BOARD_CHARGING_CMDLINE_VALUE := "true"
-BOARD_CHARGER_ENABLE_SUSPEND := true
-
-# CMHW
-BOARD_HARDWARE_CLASS += $(COMMON_PATH)/cmhw
-
-# Display
-NUM_FRAMEBUFFER_SURFACE_BUFFERS := 3
-OVERRIDE_RS_DRIVER := libRSDriver_adreno.so
-TARGET_DISPLAY_USE_RETIRE_FENCE := true
-
-# Fonts
-EXTENDED_FONT_FOOTPRINT := true
-
-# GPS
-TARGET_NO_RPC := true
-USE_DEVICE_SPECIFIC_GPS := true
-
-# Includes
-TARGET_SPECIFIC_HEADER_PATH += $(COMMON_PATH)/include
-
-# Legacy Hacks
-MALLOC_SVELTE := true
-TARGET_HAS_LEGACY_CAMERA_HAL1 := true
-TARGET_NEEDS_PLATFORM_TEXT_RELOCATIONS := true
-
-# NFC
-BOARD_NFC_HAL_SUFFIX := msm8960
-
-# Partitions
-BOARD_BOOTIMAGE_PARTITION_SIZE := 10485760
-BOARD_CACHEIMAGE_FILE_SYSTEM_TYPE := f2fs
-BOARD_CACHEIMAGE_PARTITION_SIZE := 2170552320
-BOARD_RECOVERYIMAGE_PARTITION_SIZE := 10485760
-BOARD_SYSTEMIMAGE_PARTITION_SIZE := 2894069760
-BOARD_CACHEIMAGE_PARTITION_SIZE := 2170552320
-BOARD_USERDATAIMAGE_PARTITION_SIZE := 28651274240
-BOARD_FLASH_BLOCK_SIZE := 131072
-
-# Power
-TARGET_POWERHAL_VARIANT := qcom
-
-# Properties (reset them here, include more in device if needed)
-TARGET_SYSTEM_PROP := $(COMMON_PATH)/system.prop
-
-# Recovery
-TARGET_RECOVERY_DENSITY := hdpi
-TARGET_RECOVERY_FSTAB := $(COMMON_PATH)/rootdir/etc/fstab.qcom
-TARGET_USERIMAGES_USE_EXT4 := true
-TARGET_USERIMAGES_USE_F2FS := true
-
-# Vendor Init
-TARGET_INIT_VENDOR_LIB := libinit_jfvelte
-TARGET_RECOVERY_DEVICE_MODULES := libinit_jfvelte
-
-# RIL
-BOARD_RIL_CLASS := ../../../$(COMMON_PATH)/ril
-USE_DEVICE_SPECIFIC_DATASERVICES := true
-
-# SDClang
-TARGET_USE_SDCLANG := true
-
-# SELinux
-include device/qcom/sepolicy/sepolicy.mk
-BOARD_SEPOLICY_DIRS += $(COMMON_PATH)/sepolicy
-
-# Wifi module
-BOARD_HAS_QCOM_WLAN              := true
-TARGET_USES_WCNSS_CTRL           := true
-TARGET_PROVIDES_WCNSS_QMI        := true
-TARGET_USES_QCOM_WCNSS_QMI       := true
-BOARD_WLAN_DEVICE                := qcwcn
-BOARD_HOSTAPD_DRIVER             := NL80211
-BOARD_HOSTAPD_PRIVATE_LIB        := lib_driver_cmd_$(BOARD_WLAN_DEVICE)
-BOARD_WPA_SUPPLICANT_DRIVER      := NL80211
-BOARD_WPA_SUPPLICANT_PRIVATE_LIB := lib_driver_cmd_$(BOARD_WLAN_DEVICE)
-WPA_SUPPLICANT_VERSION           := VER_0_8_X
-WIFI_DRIVER_FW_PATH_STA          := "sta"
-WIFI_DRIVER_FW_PATH_AP           := "ap"
-
-# inherit from the proprietary version
--include vendor/samsung/jf-gsm-common/BoardConfigVendor.mk
+# Move wcnss_service to vendor
+PRODUCT_VENDOR_MOVE_ENABLED := true
