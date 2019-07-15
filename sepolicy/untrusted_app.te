@@ -1,1 +1,0 @@
-allow untrusted_app efs_file:dir { getattr };
