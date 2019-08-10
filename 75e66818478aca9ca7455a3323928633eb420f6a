@@ -1,0 +1,90 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "a51050f5_bd27e06b",
+        "filename": "Android.mk",
+        "patchSetId": 1
+      },
+      "lineNbr": 17,
+      "author": {
+        "id": 16185
+      },
+      "writtenOn": "2019-08-10T06:36:46Z",
+      "side": 1,
+      "message": "really needed?",
+      "range": {
+        "startLine": 17,
+        "startChar": 22,
+        "endLine": 17,
+        "endChar": 29
+      },
+      "revId": "75e66818478aca9ca7455a3323928633eb420f6a",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "d3850d3c_612626bc",
+        "filename": "Android.mk",
+        "patchSetId": 1
+      },
+      "lineNbr": 18,
+      "author": {
+        "id": 16185
+      },
+      "writtenOn": "2019-08-10T06:36:46Z",
+      "side": 1,
+      "message": "really needed?",
+      "range": {
+        "startLine": 18,
+        "startChar": 31,
+        "endLine": 18,
+        "endChar": 38
+      },
+      "revId": "75e66818478aca9ca7455a3323928633eb420f6a",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "7757c626_0f29e7a5",
+        "filename": "README.md",
+        "patchSetId": 1
+      },
+      "lineNbr": 12,
+      "author": {
+        "id": 16185
+      },
+      "writtenOn": "2019-08-10T06:36:46Z",
+      "side": 1,
+      "message": "I read somewhere the min in this model was 32 gb? Could be bad info",
+      "range": {
+        "startLine": 12,
+        "startChar": 28,
+        "endLine": 12,
+        "endChar": 31
+      },
+      "revId": "75e66818478aca9ca7455a3323928633eb420f6a",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "eb0e016b_23f44d79",
+        "filename": "lineage_jfvelte.mk",
+        "patchSetId": 1
+      },
+      "lineNbr": 1,
+      "author": {
+        "id": 16185
+      },
+      "writtenOn": "2019-08-10T06:36:46Z",
+      "side": 1,
+      "message": "we set this all in init, do we need any of this here?",
+      "revId": "75e66818478aca9ca7455a3323928633eb420f6a",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": true
+    }
+  ]
+}
