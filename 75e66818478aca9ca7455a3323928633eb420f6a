@@ -71,6 +71,30 @@
     },
     {
       "key": {
+        "uuid": "c5e4873e_b730507b",
+        "filename": "README.md",
+        "patchSetId": 1
+      },
+      "lineNbr": 12,
+      "author": {
+        "id": 18551
+      },
+      "writtenOn": "2019-08-10T07:27:08Z",
+      "side": 1,
+      "message": "Yup, most sources say 16 only, but others say 32 only: https://www.phonearena.com/phones/Samsung-Galaxy-S4-Value-Edition_id8490 Too many sources mistake internal storage for max SD card size.",
+      "parentUuid": "7757c626_0f29e7a5",
+      "range": {
+        "startLine": 12,
+        "startChar": 28,
+        "endLine": 12,
+        "endChar": 31
+      },
+      "revId": "75e66818478aca9ca7455a3323928633eb420f6a",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": true
+    },
+    {
+      "key": {
         "uuid": "eb0e016b_23f44d79",
         "filename": "lineage_jfvelte.mk",
         "patchSetId": 1
@@ -82,6 +106,24 @@
       "writtenOn": "2019-08-10T06:36:46Z",
       "side": 1,
       "message": "we set this all in init, do we need any of this here?",
+      "revId": "75e66818478aca9ca7455a3323928633eb420f6a",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "1250f431_5777e1c8",
+        "filename": "lineage_jfvelte.mk",
+        "patchSetId": 1
+      },
+      "lineNbr": 1,
+      "author": {
+        "id": 18551
+      },
+      "writtenOn": "2019-08-10T07:27:08Z",
+      "side": 1,
+      "message": "As opposed to jf*, there are 2 almost identical variants of jfvelte: I9515 and I9515L. For the sake of simplicity, perhaps we can just use I9515\u0027s build fingerprint.",
+      "parentUuid": "eb0e016b_23f44d79",
       "revId": "75e66818478aca9ca7455a3323928633eb420f6a",
       "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
       "unresolved": true
