@@ -5,7 +5,6 @@ vendor/lib/libacdbloader.so
 vendor/lib/libaudcal.so
 
 # Bluetooth
-vendor/bin/btnvtool
 vendor/bin/hci_qcomm_init
 
 # Camera
