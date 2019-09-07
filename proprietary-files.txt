@@ -3,6 +3,7 @@
 # Audio
 vendor/lib/libacdbloader.so
 vendor/lib/libaudcal.so
+vendor/lib/libcsd-client.so
 
 # Bluetooth
 vendor/bin/hci_qcomm_init
