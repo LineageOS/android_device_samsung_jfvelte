@@ -36,7 +36,7 @@ PRODUCT_COPY_FILES += \
 
 # Custom wifi service
 PRODUCT_COPY_FILES += \
-    $(LOCAL_PATH)/rootdir/vendor/etc/init/android.hardware.wifi@1.0-service.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/android.hardware.wifi@1.0-service.rc
+    $(LOCAL_PATH)/rootdir/vendor/etc/init/android.hardware.wifi@1.0-service.legacy.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/android.hardware.wifi@1.0-service.legacy.rc
 
 # Prima opensource driver files
 PRODUCT_COPY_FILES += \
