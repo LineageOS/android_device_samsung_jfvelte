@@ -1,6 +1,6 @@
 on init
     # Write WCNSS serial number
-    write /sys/devices/platform/wcnss_wlan.0/serial_number ${ro.serialno}
+    write /sys/devices/platform/wcnss_wlan.0/serial_number ${ro.boot.serialno}
 
     # Create directories for wifihal services
     mkdir /dev/socket/wifihal 2770 wifi wifi
