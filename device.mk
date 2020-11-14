@@ -34,10 +34,6 @@ PRODUCT_COPY_FILES += \
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/rootdir/vendor/bin/init.qcom.bt.sh:$(TARGET_COPY_OUT_VENDOR)/bin/init.qcom.bt.sh
 
-# Custom wifi service
-PRODUCT_COPY_FILES += \
-    $(LOCAL_PATH)/rootdir/vendor/etc/init/android.hardware.wifi@1.0-service.legacy.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/android.hardware.wifi@1.0-service.legacy.rc
-
 # Prima opensource driver files
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/prima/WCNSS_cfg.dat:$(TARGET_COPY_OUT_VENDOR)/firmware/wlan/prima/WCNSS_cfg.dat \
