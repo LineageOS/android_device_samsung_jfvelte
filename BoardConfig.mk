@@ -22,9 +22,6 @@
 # Assert
 TARGET_OTA_ASSERT_DEVICE := jfvelte
 
-# Build
-BUILD_BROKEN_DUP_RULES := true
-
 # Kernel
 TARGET_KERNEL_VARIANT_CONFIG := jfve_eur_defconfig
 
