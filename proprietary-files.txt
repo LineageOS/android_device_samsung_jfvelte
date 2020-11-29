@@ -7,7 +7,8 @@ vendor/lib/libcsd-client.so
 
 # Bluetooth
 vendor/bin/hci_qcomm_init
-vendor/lib/libbtnv.so
+# From G530FXXS1APK2
+vendor/lib/libbtnv.so|710d3de03c5b9ae51880dd7478344fbec5a02c26
 
 # Camera
 cameradata/M10MO_SFW.bin
