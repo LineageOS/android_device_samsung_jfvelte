@@ -16,8 +16,8 @@
 # Inherit from jf-common
 $(call inherit-product, device/samsung/jf-common/jf-common.mk)
 
-# Also get non-open-source specific aspects if available
-$(call inherit-product-if-exists, vendor/samsung/jfvelte/jfvelte-vendor.mk)
+# Also get non-open-source specific aspects
+$(call inherit-product, vendor/samsung/jfvelte/jfvelte-vendor.mk)
 
 # Overlays
 DEVICE_PACKAGE_OVERLAYS += device/samsung/jfvelte/overlay
